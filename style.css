@@ -170,6 +170,69 @@ img {
   color: var(--clr-primary);
 }
 
+/* MOBILE REPSPONSIVE | HEADER */
+.toggle__menu {
+  display: none;
+}
+
+.toggle__menu span {
+  background-color: var(--clr-dark);
+  width: 3rem;
+  height: 0.4rem;
+  display: block;
+  border: 3px solid var(--clr-dark);
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 520px) {
+  .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-tertiary);
+    flex-direction: column;
+    text-align: center;
+    right: -100%;
+    transform: translateY(-20rem);
+    margin-top: 30rem;
+    z-index: 9999;
+    transition: all 0.5 ease;
+    justify-content: center;
+  }
+
+  .header__nav.open {
+    right: 0;
+    transition: all 0.5 ease;
+  }
+
+  .toggle__menu.open span:first-child {
+    transform: translate(0, 10px) rotate(225deg);
+    transition: all 0.5 ease;
+  }
+
+  .toggle__menu.open span:nth-child(2) {
+    opacity: 0;
+    transition: all 0.5 ease;
+  }
+  .toggle__menu.open span:last-child {
+    transform: translate(0, -7px) rotate(-225deg);
+    transition: all 0.5 ease;
+  }
+
+
+  .header__logo {
+    width: 12rem;
+  }
+}
+
+
 /* TOP */
 .top {
   padding-top: 13rem;
@@ -253,6 +316,25 @@ img {
   top: 4rem;
 }
 
+/* MVBILE RESPONSIVE */
+@media screen and (max-width: 520px) {
+  .homeBanner__img {
+    display: none;
+  }
+
+  .homeBanner__text {
+    text-align: justify;
+  }
+  .homeBanner__text ul li:nth-child(2) {
+    margin-left: 0;
+  }
+  
+  .homeBanner__text ul li:last-child::before {
+    display: none;
+  }
+}
+
+
 /* HOME ABOUT */
 .homeAbout {
   padding: 5rem 0;
@@ -292,6 +374,15 @@ img {
   gap: 3rem;
 }
 
+/* MOBILE RESPONSIVE */
+@media screen and (max-width:520px) {
+  .homeAbout__title h2::before,
+  .homeAbout__img {
+    display: none;
+  }
+}
+
+
 /* HOME CATALOG */
 .homeCatalog {
   padding: 5rem 0;
@@ -325,7 +416,17 @@ img {
 
 }
 
+/* MOBILE RESPONSIVE | HOME CATALOG */
+@media screen and (max-width: 520px) {
+  .homeCatalog__title h2::after {
+    display: none;
+  }
 
+  .homeCatalog__wrapper {
+    gap: 3rem;
+  }
+  
+}
 
 
 /* CTA */
@@ -348,6 +449,14 @@ img {
 .cta__wrapper p {
   margin-bottom: 2rem;
 }
+
+/* MOBILE RESPONSIVE | CTA */
+@media screen and (max-width: 520px) {
+  .cta__wrapper h2 {
+    font-size: var(--h3);
+  }
+}
+
 
 /* FOOTER */
 .footer {
@@ -374,7 +483,12 @@ img {
   color: var(--clr-primary);
 }
 
-
+/* RESPONSIVE */
+@media screen and (max-width: 520px) {
+  .footer__wrapper {
+    flex-direction: column;
+  }
+}
 
 /* ABOUT BANNER */
 
@@ -398,10 +512,10 @@ img {
 }
 
 .aboutBanner__text H1{
-  font-size: var(--h1);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1rem;
   margin-bottom: 1rem;
+  font-size: var(--h2);
 }
 
 .aboutBanner__social {
@@ -457,7 +571,249 @@ img {
 
 
 
+/* CATALOG PAGE BANNER */
+.catalogBanner {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ), url(./img/catalog-banner.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50rem 0;
+}
 
+.catalogBanner__wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+  flex-direction: column;
+}
+
+.catalogBanner__wrapper H1 {
+  font-size: var(--h1);
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
+.catalogBanner__wrapper p {
+  font-size: 2.3rem;
+  font-weight: 400;
+  letter-spacing: -0.02rem;
+  word-spacing: -0.1rem;
+  line-height: 2rem;
+}
+
+
+
+
+/* 
+.catalogDesign__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+
+.design__container {
+  width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+.catalogDesign__title {
+  text-align: center;
+  margin: auto 0;
+}
+
+.catalogDesign__card--left {
+  width: 50%;
+  margin-left: 0;
+  
+}
+
+.catalogDesign__card--img {
+  width: 70%;
+  height: 40rem;
+  display: flex;
+  justify-content: end;
+  margin: 10rem 0;
+
+}
+
+
+.catalogDesign__card--img img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 5rem 0;
+  position: relative;
+  left: 110px;
+  
+
+}
+
+.catalogDesign__card--text {
+  text-align: justify;
+  align-self: center;
+  width: 50%;
+  padding-left: 3rem;
+} */
+
+
+
+.catalogDesign {
+  margin: 5rem 0 12rem 0;
+}
+
+.catalogDesign__title {
+  font-size: var(--h3);
+  color: var(--clr-primary);
+  text-align: center;
+  font-weight: 700;
+}
+
+
+.catalogDesign__wrapper {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(25rem, 1fr));
+  padding: 0;
+}
+
+.space {
+  height: 0rem;
+}
+
+.spaceReverse {
+  height: 0rem;
+  text-align: right;
+}
+
+.spaceReverse::after {
+  display: inline-block;
+  position: relative;
+  content: " ";
+  width: 45%;
+  height: 68rem;
+  right: -9rem;
+  z-index: -1;
+  background: var(--clr-secondary);
+}
+
+.space::before {
+  display: inline-block;
+  position: relative;
+  content: " ";
+  width: 45%;
+  height: 68rem;
+  left: -9rem;
+  z-index: -1;
+  background: var(--clr-secondary);
+}
+
+
+.catalogDesign__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+  max-width: 150rem;
+  margin: 7rem auto;
+  z-index: 9999;
+}
+
+.catalogDesign__cardReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+  max-width: 150rem;
+  margin: 7rem auto;
+  z-index: 9999;
+}
+
+.catalogDesign__card--img {
+  width: 50%;
+  align-self: center;
+}
+
+.catalogDesign__card--img img{
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.catalogDesign__card--text {
+  align-content: center;
+  width: 50%;
+  padding: 0;
+  text-align: justify;
+}
+
+.catalogDesign__card--text H4{
+  font-size: var(--h3);
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+
+
+
+
+
+.contactBanner {
+  padding: 20rem 0 10rem 0;
+}
+
+.contactBanner__title H2{
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.contactBanner__wrapper {
+  display: flex;
+  flex-direction: row;
+  /* background-color: red; */
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.contactBanner__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60rem;
+  height: 100%;
+  /* background-color: blue; */
+  margin: auto 0;
+}
+
+.contactBanner__form p {
+  letter-spacing: 1rem;
+}
+
+.contactBanner__info {
+  text-align: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  width: 35rem;
+  margin: auto 0;
+  padding: 5rem 0;
+  height: 100%;
+}
+
+.contact__links a{
+  color: var(--clr-light);
+}
+.contact__links a:hover{
+  color: var(--clr-primary);
+}
 
 
 
@@ -479,6 +835,7 @@ img {
   padding: 1rem 2rem;
   color: transparent;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  text-align: center;
 }
 
 .btn.bg-tertiary {
@@ -490,6 +847,20 @@ img {
 .btn.bg-tertiary:hover {
   background-color: var(--clr-dark);
   color: var(--clr-tertiary);
+}
+
+.btn.bg-dark {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-weight: 700;
+  border: 1px solid var(--clr-dark);
+  padding: 0;
+}
+
+.btn.bg-dark:hover {
+  color: var(--clr-dark);
+  border: 1px solid var(--clr-dark);
+  background-color: transparent;
 }
 
 .no-bg {
@@ -524,4 +895,19 @@ img {
   margin-bottom: 1rem;
   font-weight: 700;
 }
+
+
+.input {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid var(--clr-dark);
+  margin: 0.3rem 0;
+
+}
+
+.input-text {
+  height: 3rem;
+}
+
+
 

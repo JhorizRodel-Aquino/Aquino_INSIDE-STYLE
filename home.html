@@ -6,12 +6,21 @@
     <title>Inside Style - Home</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./img/LOGO.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER -->
     <!-- header.header>.container>.header__wrapper>.header__logo>img^nav>ul.header__nav>li*4>a -->
-    <header class="header">
+    <header
+      class="header"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      data-aos-anchor-placement="bottom-center"
+    >
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo">
@@ -25,6 +34,11 @@
               <li><a href="./contact.html">CONTACT</a></li>
             </ul>
           </nav>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -175,34 +189,54 @@
     </section>
 
     <!-- CALL TO ACTION -->
-     <section class="cta">
+    <section class="cta">
       <div class="container">
         <div class="cta__wrapper">
           <h2>Feel free to talk about your desire style</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, inventore.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            inventore.
+          </p>
           <a href="" class="btn bg-tertiary">Contact us</a>
         </div>
       </div>
-     </section>
+    </section>
 
-     <!-- FOOTER -->
-      <!-- footer.footer>.container>.footer__wrapper>ul.footer__social>li*5>a^^p*2 -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__wrapper">
-            <ul class="footer__social">
-              <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-              <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-            </ul>
-            <p>Baloc Road, Brgy. San Ignacio San Pablo City, Laguna</p>
-            <p>©I2023</p>
-          </div>
+    <!-- FOOTER -->
+    <!-- footer.footer>.container>.footer__wrapper>ul.footer__social>li*5>a^^p*2 -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <ul class="footer__social">
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </li>
+          </ul>
+          <p>Baloc Road, Brgy. San Ignacio San Pablo City, Laguna</p>
+          <p>©I2023</p>
         </div>
-      </footer>
+      </div>
+    </footer>
 
 
+    <!-- SCRIPT -->
+    <script src="./js/toggle__menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

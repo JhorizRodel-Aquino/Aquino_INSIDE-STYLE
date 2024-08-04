@@ -581,6 +581,9 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .catalogBanner__wrapper {
@@ -678,21 +681,23 @@ img {
 
 
 .catalogDesign__wrapper {
-  display: grid;
+  /* display: grid;
   grid-template-rows: repeat(auto-fit, minmax(25rem, 1fr));
-  padding: 0;
+  padding: 0; */
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
-.space {
+/* .space {
   height: 0rem;
 }
 
 .spaceReverse {
   height: 0rem;
   text-align: right;
-}
+} */
 
-.spaceReverse::after {
+/* .spaceReverse::after {
   display: inline-block;
   position: relative;
   content: " ";
@@ -712,47 +717,70 @@ img {
   left: -9rem;
   z-index: -1;
   background: var(--clr-secondary);
-}
+} */
 
 
 .catalogDesign__card {
+  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 4rem;
-  width: 100%;
   max-width: 150rem;
-  margin: 7rem auto;
-  z-index: 9999;
+  margin: 5rem auto;
 }
 
+.catalogDesign__card::before {
+  position: absolute;
+  content: " ";
+  width: 245rem;
+  height: 45rem;
+  left: -200rem;
+  z-index: -1;
+  background: var(--clr-secondary);
+}
 .catalogDesign__cardReverse {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  align-items: center;
   gap: 4rem;
-  width: 100%;
   max-width: 150rem;
-  margin: 7rem auto;
-  z-index: 9999;
+  margin: 5rem auto;
 }
+
+.catalogDesign__cardReverse::before {
+  position: absolute;
+  content: " ";
+  width: 245rem;
+  height: 45rem;
+  right: -200rem;
+  z-index: -1;
+  background: var(--clr-secondary);
+}
+
+
+
+
+
 
 .catalogDesign__card--img {
   width: 50%;
   align-self: center;
+  background-color: green;
 }
 
 .catalogDesign__card--img img{
   display: block;
-  text-align: center;
-  width: 100%;
   margin: auto;
+  width: 100%;
+  height: 35rem;
 }
 
 .catalogDesign__card--text {
   align-content: center;
   width: 50%;
-  padding: 0;
   text-align: justify;
 }
 
@@ -767,11 +795,12 @@ img {
 
 
 .contactBanner {
-  padding: 20rem 0 10rem 0;
+  padding: 25rem 0 20rem 0;
+  background-color: var(--clr-tertiary);
 }
 
-.contactBanner__title H2{
-  font-size: var(--h2);
+.contactBanner__title h1{
+  font-size: var(--h1);
   font-weight: 700;
   color: var(--clr-primary);
 }
@@ -781,17 +810,19 @@ img {
   flex-direction: row;
   /* background-color: red; */
   justify-content: space-between;
-  margin: 1rem 0;
+  align-items: center;
+  margin: 3rem 0;
+  /* height: 40rem; */
 }
 
 .contactBanner__form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 60rem;
-  height: 100%;
-  /* background-color: blue; */
-  margin: auto 0;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 90rem;
+  margin: 0;
+
 }
 
 .contactBanner__form p {
@@ -799,17 +830,42 @@ img {
 }
 
 .contactBanner__info {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  width: 35rem;
-  margin: auto 0;
-  padding: 5rem 0;
-  height: 100%;
+  width: 40rem;
+  padding: 3rem 0;
+  height: 29.2rem;
+  justify-content: space-around;
 }
 
+.contactBanner__info h3 {
+  font-size: var(--h3);
+  font-weight: 300;
+
+}
+
+.contact__links{
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  gap: 1.5rem;
+
+}
+.contact__links li{
+  text-align: justify;
+  width: 100%;
+}
+
+
+
 .contact__links a{
-  color: var(--clr-light);
+  display: inline-block;
+  color: var(--clr-secondary);
+  margin-right: 1rem;
+  width: 1.65rem;
 }
 .contact__links a:hover{
   color: var(--clr-primary);
@@ -853,14 +909,11 @@ img {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   font-weight: 700;
-  border: 1px solid var(--clr-dark);
   padding: 0;
 }
 
 .btn.bg-dark:hover {
-  color: var(--clr-dark);
-  border: 1px solid var(--clr-dark);
-  background-color: transparent;
+  background-color: var(--clr-primary);
 }
 
 .no-bg {
@@ -900,13 +953,18 @@ img {
 .input {
   display: block;
   border: 0;
-  border-bottom: 1px solid var(--clr-dark);
-  margin: 0.3rem 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  background-color: var(--clr-tertiary);
+  padding-left: 1.2rem;
+}
 
+.input::placeholder {
+  font-family: var(--font-style);
+  font-size: 1.5rem;
 }
 
 .input-text {
-  height: 3rem;
+  height: 4rem;
 }
 
 

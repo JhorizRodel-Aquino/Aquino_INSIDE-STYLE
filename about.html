@@ -10,12 +10,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- HEADER -->
     <!-- header.header>.container>.header__wrapper>.header__logo>img^nav>ul.header__nav>li*4>a -->
-    <header class="header">
+    <header
+      class="header"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-anchor-placement="bottom-center"
+    >
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo">
@@ -29,7 +35,11 @@
               <li><a href="./contact.html">CONTACT</a></li>
             </ul>
           </nav>
-          
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -202,5 +212,13 @@
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPT -->
+    <script src="./js/toggle__menu.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

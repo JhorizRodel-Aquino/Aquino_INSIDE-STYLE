@@ -142,7 +142,6 @@ img {
   position: fixed;
   z-index: 9999;
   background-color: var(--clr-tertiary);
-  /* p1rem0 */
   padding: 1rem 0;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -151,7 +150,6 @@ img {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  /* flex-direction: row-reverse */
   align-items: center;
 }
 
@@ -228,6 +226,11 @@ img {
 
   .header__logo {
     width: 12rem;
+  }
+
+  .container {
+    max-width: 52rem;
+    padding: 0 5rem;
   }
 }
 
@@ -483,7 +486,6 @@ img {
 }
 
 /* ABOUT BANNER */
-
 .aboutBanner {
   padding-top: 20rem;
   padding-bottom: 8rem;
@@ -545,13 +547,11 @@ img {
   }
 
   .aboutBanner__text {
-    /* background-color: red; */
     margin-top: -5rem;
     max-width: 40rem;
   }
 
   .aboutBanner__text h1 {
-    /* background-color: green; */
     transform: translateY(-67rem);
   }
 
@@ -561,7 +561,6 @@ img {
 }
 
 /* ABOUT STYLE */
-
 .aboutStyle {
   background-color: var(--clr-dark);
   padding: 5rem 0;
@@ -615,62 +614,6 @@ img {
   line-height: 2rem;
 }
 
-/* 
-.catalogDesign__card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  
-}
-
-
-.design__container {
-  width: 100%;
-  max-width: 150rem;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-
-.catalogDesign__title {
-  text-align: center;
-  margin: auto 0;
-}
-
-.catalogDesign__card--left {
-  width: 50%;
-  margin-left: 0;
-  
-}
-
-.catalogDesign__card--img {
-  width: 70%;
-  height: 40rem;
-  display: flex;
-  justify-content: end;
-  margin: 10rem 0;
-
-}
-
-
-.catalogDesign__card--img img {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 5rem 0;
-  position: relative;
-  left: 110px;
-  
-
-}
-
-.catalogDesign__card--text {
-  text-align: justify;
-  align-self: center;
-  width: 50%;
-  padding-left: 3rem;
-} */
-
 /* CATALOG DESIGN */
 .catalogDesign {
   margin: 5rem 0 13rem 0;
@@ -684,43 +627,9 @@ img {
 }
 
 .catalogDesign__wrapper {
-  /* display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(25rem, 1fr));
-  padding: 0; */
   max-width: 130rem;
   margin: -5rem auto;
 }
-
-/* .space {
-  height: 0rem;
-}
-
-.spaceReverse {
-  height: 0rem;
-  text-align: right;
-} */
-
-/* .spaceReverse::after {
-  display: inline-block;
-  position: relative;
-  content: " ";
-  width: 45%;
-  height: 68rem;
-  right: -9rem;
-  z-index: -1;
-  background: var(--clr-secondary);
-}
-
-.space::before {
-  display: inline-block;
-  position: relative;
-  content: " ";
-  width: 45%;
-  height: 68rem;
-  left: -9rem;
-  z-index: -1;
-  background: var(--clr-secondary);
-} */
 
 .catalogDesign__card {
   position: relative;
@@ -765,7 +674,6 @@ img {
 .catalogDesign__card--img {
   width: 50%;
   align-self: center;
-  background-color: green;
 }
 
 .catalogDesign__card--img img {
@@ -790,27 +698,17 @@ img {
 
 /* MOBILE RESPONSIVE | CATALOG DESIGN */
 @media screen and (max-width: 520px) {
-  /* .container {
-    width: 500px;
-    background-color: blue;
-  } */
-
   .catalogDesign {
-    /* background-color: green; */
-    margin: 5rem 0;
+    max-width: 52rem;
+    padding: 0 5rem;
   }
 
   .catalogDesign__wrapper {
-    /* background-color: green; */
     margin: -2rem auto;
   }
 
   .catalogDesign__card {
     flex-direction: column;
-    width: 50rem;
-    margin: 8rem 0;
-
-    /* background-color: red; */
   }
   .catalogDesign__card::before {
     height: 40rem;
@@ -822,19 +720,19 @@ img {
     height: 40rem;
     top: -2.5rem;
     left: 13rem;
+    width: 81%;
   }
 
   .catalogDesign__card:nth-child(even) {
     flex-direction: column;
-    width: 50rem;
   }
 
   .catalogDesign__card--img {
-    width: 80%;
+    width: 100%;
   }
 
   .catalogDesign__card--text {
-    width: 70%;
+    width: 100%;
   }
   .catalogDesign__card--text h4 {
     text-align: center;
@@ -859,11 +757,8 @@ img {
 .contactBanner__wrapper {
   display: flex;
   flex-direction: row;
-  /* background-color: red; */
   justify-content: space-between;
-  /* align-items: center; */
   margin: 3rem 0;
-  /* height: 40rem; */
 }
 
 .contactBanner__wrapper form {
@@ -886,7 +781,6 @@ img {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   width: 50rem;
-  /* padding: 3rem 0; */
   justify-content: space-evenly;
 }
 
@@ -926,8 +820,8 @@ img {
 /* MOBILE RESPONSIVE | CONTACT BANNER */
 @media screen and (max-width: 520px) {
   .contactBanner {
-    padding-top: 15rem;
-    height: 100vh;
+    padding: 20rem 0 5rem 0;
+    height: 90rem;
   }
 
   .contactBanner__wrapper {
